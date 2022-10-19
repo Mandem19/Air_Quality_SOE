@@ -1,0 +1,35 @@
+     <main>:
+         00: 20 10 00 00    leti r1, 0
+         04: 20 20 00 00    leti r2, 0
+         08: 20 30 ff 00    leti r3, 0xFF00FF00
+         0c: 28 33 00 04    
+         10: 20 33 00 0f    
+         14: 28 33 00 0c    
+         18: 20 33 0f 00    
+         1c: 50 ef 00 44    call drawpixel
+         20: 20 10 00 00    leti r1, 0
+         24: 20 20 00 3b    leti r2, 59
+         28: 20 30 ff a5    leti r3, 0xFFA50000
+         2c: 28 33 00 10    
+         30: 50 ef 00 30    call drawpixel
+         34: 20 10 00 4f    leti r1, 79
+         38: 20 20 00 00    leti r2, 0
+         3c: 20 30 00 ff    leti r3, 0x00FF0000
+         40: 28 33 00 10    
+         44: 50 ef 00 1c    call drawpixel
+         48: 20 10 00 4f    leti r1, 79
+         4c: 20 20 00 3b    leti r2, 59
+         50: 20 30 00 ff    leti r3, 0xFF000000
+         54: 28 33 00 18    
+         58: 50 ef 00 08    call drawpixel
+         5c: 20 ff 00 00    bra +0
+<drawpixel>:
+         60: 22 11 00 04    muli R1, R1, 4
+         64: 22 22 01 40    muli R2, R2, 320
+         68: 10 72 10 00    add R7, R2, R1
+         6c: 20 40 00 0b    leti R4, 0xB0000000
+         70: 28 44 00 1c    
+         74: 10 54 70 00    add R5, R4, R7
+         78: 41 53 00 00    store [r5], r3
+         7c: 50 0e 00 00    ret
+

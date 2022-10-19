@@ -1,0 +1,7 @@
+<a>:
+ 00: 00 ff ff ff    
+<b>:
+ 04: 00 00 00 00    
+ 08: 41 f1 ff f8    store [A], r1
+ 0c: 41 f2 ff f8    store [B], r2
+

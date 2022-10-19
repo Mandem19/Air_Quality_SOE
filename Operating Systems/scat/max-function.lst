@@ -1,0 +1,14 @@
+  <a>:
+   00: 00 00 00 0c    
+  <b>:
+   04: 00 00 00 18    
+   08: 40 1f ff f8    load r1, [A]
+   0c: 40 11 00 00    load r1, [r1]
+   10: 40 2f ff f4    load r2, [B]
+   14: 40 22 00 00    load r2, [r2]
+   18: 32 12 00 0c    blt r1, r2, end
+   1c: 20 12 00 00    mov r1, r2
+   20: 41 f3 ff e4    store [B], r3
+<end>:
+   24: 20 ff 00 00    bra +0
+

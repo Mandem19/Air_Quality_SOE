@@ -1,0 +1,13 @@
+   <a>:
+    00: 00 00 00 4e    
+   <b>:
+    04: 00 00 00 55    
+   <c>:
+    08: 00 00 00 00    
+<loop>:
+    0c: 40 2f ff f4    load R2, [A]
+    10: 40 3f ff f4    load R3, [B]
+    14: 35 32 ff f8    bgeu R3, R2, loop
+    18: 41 f3 ff f0    store [C], R3
+    1c: 20 ff 00 00    bra +0
+

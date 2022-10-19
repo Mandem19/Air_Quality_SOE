@@ -1,0 +1,22 @@
+<array>:
+     00: 00 00 00 0a    
+     04: 00 00 00 09    
+     08: 00 00 00 0e    
+     0c: 00 00 00 0d    
+     10: 00 00 00 0f    
+<start>:
+     14: 40 0f ff ec    load r0, [array]
+     18: 40 10 00 00    load r1, [r0]
+     1c: 20 21 00 00    mov r2, r1
+ <loop>:
+     20: 40 10 00 00    load r1, [r0]
+     24: 50 ef 00 0c    call loop1
+     28: 21 55 00 01    subi r5, r5, 1
+     2c: 50 ef 00 10    caLL halt
+<loop1>:
+     30: 20 21 00 00    mov r2, r1
+     34: 21 55 00 01    subi r5,r5,1
+     38: 50 ef 00 04    call halt
+ <halt>:
+     3c: 20 ff 00 00    bra +0
+

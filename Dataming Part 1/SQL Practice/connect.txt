@@ -1,0 +1,1 @@
+jordanukawoko@Jordans-MacBook-Pro SQL Practice % export PATH=/Library/PostgreSQL/14/bin:$PATH

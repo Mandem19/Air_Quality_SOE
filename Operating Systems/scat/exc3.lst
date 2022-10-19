@@ -1,0 +1,8 @@
+         00: 20 30 00 05    leti r3, 5
+         04: 20 10 00 05    leti r1, 5
+<factorial>:
+         08: 21 11 00 01    subi r1, r1, 1
+         0c: 12 33 10 00    mul r3, r3, r1
+         10: 50 ef ff f8    call factorial
+         14: 20 ff 00 00    bra  +0
+
